@@ -17,11 +17,13 @@
 
 .top-row {
     height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    background: linear-gradient(135deg, #0d0d0d, #1c1c1c);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .navbar-brand {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .bi {
@@ -42,12 +44,9 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M3 4.6C3 4.03995 3 3.75992 3.10899 3.54601C3.20487 3.35785 3.35785 3.20487 3.54601 3.10899C3.75992 3 4.03995 3 4.6 3H13.4C13.9601 3 14.2401 3 14.454 3.10899C14.6422 3.20487 14.7951 3.35785 14.891 3.54601C15 3.75992 15 4.03995 15 4.6V5.4C15 5.96005 15 6.24008 14.891 6.45399C14.7951 6.64215 14.6422 6.79513 14.454 6.89101C14.2401 7 13.9601 7 13.4 7H4.6C4.03995 7 3.75992 7 3.54601 6.89101C3.35785 6.79513 3.20487 6.64215 3.10899 6.45399C3 6.24008 3 5.96005 3 5.4V4.6Z' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3Cpath d='M3 11.6C3 11.0399 3 10.7599 3.10899 10.546C3.20487 10.3578 3.35785 10.2049 3.54601 10.109C3.75992 10 4.03995 10 4.6 10H19.4C19.9601 10 20.2401 10 20.454 10.109C20.6422 10.2049 20.7951 10.3578 20.891 10.546C21 10.7599 21 11.0399 21 11.6V12.4C21 12.9601 21 13.2401 20.891 13.454C20.7951 13.6422 20.6422 13.7951 20.454 13.891C20.2401 14 19.9601 14 19.4 14H4.6C4.03995 14 3.75992 14 3.54601 13.891C3.35785 13.7951 3.20487 13.6422 3.10899 13.454C3 13.2401 3 12.9601 3 12.4V11.6Z' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3Cpath d='M3 18.6C3 18.0399 3 17.7599 3.10899 17.546C3.20487 17.3578 3.35785 17.2049 3.54601 17.109C3.75992 17 4.03995 17 4.6 17H9.4C9.96005 17 10.2401 17 10.454 17.109C10.6422 17.2049 10.7951 17.3578 10.891 17.546C11 17.7599 11 18.0399 11 18.6V19.4C11 19.9601 11 20.2401 10.891 20.454C10.7951 20.6422 10.6422 20.7951 10.454 20.891C10.2401 21 9.96005 21 9.4 21H4.6C4.03995 21 3.75992 21 3.54601 20.891C3.35785 20.7951 3.20487 20.6422 3.10899 20.454C3 20.2401 3 19.9601 3 19.4V18.6Z' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
 }
 
-.bi-list-nested-nav-menu {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-list-nested' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z'/%3E%3C/svg%3E");
-}
-
 .nav-item {
-    font-size: 0.9rem;
+    font-size: 1.0rem;
+    font-weight: bold;
     padding-bottom: 0.5rem;
 }
 
@@ -71,18 +70,32 @@
         width: 100%;
     }
 
+.nav-item#xp-tracker ::deep a.active {
+    background-color: rgba(102,51,153,0.37);
+    color: white;
+}
+
+.nav-item#gold-tracker ::deep a.active {
+    background-color: rgba(255,240,0,0.37);
+    color: white;
+}
+
 .nav-item ::deep a.active {
     background-color: rgba(255,255,255,0.37);
     color: white;
 }
 
 .nav-item ::deep .nav-link:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .nav-scrollable {
-    display: none;
+    background: linear-gradient(135deg, #1c1c1c, #0d0d0d);
+    color: #d7d7d7;
+    overflow-y: auto;
+    max-height: calc(100vh - 3.5rem);
 }
 
 .navbar-toggler:checked ~ .nav-scrollable {
