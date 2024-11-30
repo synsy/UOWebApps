@@ -1,0 +1,40 @@
+﻿@page "/goldtracker"
+@rendermode InteractiveWebAssembly
+@using UOWebApps.Client.Services
+@inject GoldTrackerService GoldTrackerService
+
+<PageTitle>Gold Tracker</PageTitle>
+
+<div class="gold-tracker-container">
+    <div class="gold-tracker-buttons">
+        <button class="btn-primary gold-btn" @onclick="Add10k">Add 10k</button>
+        <button class="btn-primary gold-btn" @onclick="Add5k">Add 5k</button>
+        <button class="btn-reset gold-btn" @onclick="Reset">Reset</button>
+    </div>
+
+    <div class="gold-tracker-display">
+        <h1 class="gold-tracker-title">Total Gold:</h1>
+        <h2 class="gold-tracker-total">@GoldTrackerService.TotalGold.ToString("N0")</h2>
+        <h3 class="gold-tracker-split-title">Gold Split:</h3>
+
+        <!-- Use @bind-value and @bind-value:event to separate the two behaviors -->
+        <input type="number" id="input1" @bind-value="GoldTrackerService.NumPlayers" min="1" step="1" class="no-spin" @bind-value:event="oninput" />
+
+        <h3 class="gold-tracker-split-total">@GoldTrackerService.GoldSplit.ToString("N0")</h3>
+    </div>
+</div>
+
+@code {
+    private void Add10k() => GoldTrackerService.AddGold(10000);
+
+    private void Add5k() => GoldTrackerService.AddGold(5000);
+
+    private void Reset() => GoldTrackerService.ResetGold();
+
+    // This method is no longer needed since @bind-value will update automatically
+    private void HandleNumPlayersChanged()
+    {
+        // Call SplitGold when the value changes
+        GoldTrackerService.SplitGold();
+    }
+}

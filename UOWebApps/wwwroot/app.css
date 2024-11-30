@@ -49,3 +49,205 @@ h1:focus {
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
 }
+
+/* Main container for XP tracker */
+.xp-tracker-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Each column styling */
+.column {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .column h2 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #663399;
+        text-align: center;
+        border-bottom: 2px solid #663399; /* Accent color */
+        padding-bottom: 10px;
+    }
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+    .input-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+.result h3 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #141414; /* Accent color */
+    text-align: center;
+}
+
+.result p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #663399;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .xp-tracker-container {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+    }
+}
+
+/* Gold Tracker Main Container */
+.gold-tracker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif; /* Optional, adjust based on your site's font */
+}
+
+/* Button Section */
+.gold-tracker-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.gold-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    background-color: #E5D800; /* Primary color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+    .gold-btn:hover {
+        background-color: #FFF000;
+        color: black;
+        transform: translateY(-2px);
+    }
+
+    .gold-btn:active {
+        background-color: #b2a800;
+        transform: translateY(0);
+    }
+
+    .gold-btn:focus {
+        background-color: #b2a800;
+        transform: translateY(0);
+    }
+
+.btn-reset {
+    background-color: #e63946; /* Red for reset */
+}
+
+    .btn-reset:hover {
+        background-color: #b82e38;
+    }
+
+/* Display Section */
+.gold-tracker-display {
+    text-align: center;
+}
+
+.gold-tracker-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.gold-tracker-total {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #09BC8A; /* Accent color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Base styles */
+
+.home-container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-card {
+    display: block;
+    padding: 15px 20px;
+    background-color: #09BC8A;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+    .link-card:hover {
+        background-color: #07a276;
+        transform: translateY(-5px);
+    }
+
+    .link-card:active {
+        transform: translateY(2px);
+    }
+
